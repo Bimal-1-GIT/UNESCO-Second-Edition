@@ -1,0 +1,238 @@
+/* MIL4Kids Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #FFE066 0%, #FF9A56 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Common Components */
+.page-container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #FFE066 0%, #FF9A56 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: #2E86AB;
+  text-shadow: 3px 3px 0px #FFF, 6px 6px 0px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+.mascot {
+  font-size: 4rem;
+  animation: wave 3s ease-in-out infinite;
+  margin: 10px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(45deg, #FF6B6B, #FF8E8E);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive;
+  min-width: 200px;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+  background: linear-gradient(45deg, #FF5252, #FF7373);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #4ECDC4, #44A08D);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #3DBDB6, #3A8E7A);
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, #A8E6CF, #7FCDCD);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, #96E0B8, #6FB8B8);
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #90EE90, #32CD32);
+}
+
+.btn-danger {
+  background: linear-gradient(45deg, #FF6B6B, #FF4757);
+}
+
+/* Cards and Panels */
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  max-width: 800px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background: #E0E0E0;
+  border-radius: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  background: linear-gradient(45deg, #4ECDC4, #44A08D);
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Text Styles */
+.welcome-text {
+  font-size: 1.4rem;
+  color: #2E86AB;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.lesson-text {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+/* Navigation */
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    min-width: 150px;
+  }
+  
+  .card {
+    margin: 10px;
+    padding: 20px;
+  }
+}
+
+/* Celebration Animations */
+.celebration {
+  animation: celebrate 1s ease-in-out;
+}
+
+@keyframes celebrate {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.star {
+  color: #FFD700;
+  font-size: 2rem;
+  animation: twinkle 1.5s infinite;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
