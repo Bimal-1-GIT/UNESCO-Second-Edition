@@ -39,7 +39,23 @@ const Home = () => {
           </button>
           <button 
             className="btn"
+            onClick={() => navigate('/bad-news-game')}
+            style={{ background: 'linear-gradient(45deg, #FF4757, #FF3742)' }}
+          >
+            🎯 Bad News Game
+          </button>
+        </div>
+
+        {/* About MIL moved to bottom */}
+        <div style={{ marginTop: '30px' }}>
+          <button 
+            className="btn"
             onClick={() => navigate('/about')}
+            style={{ 
+              fontSize: '1rem', 
+              padding: '10px 20px',
+              background: 'linear-gradient(45deg, #A8E6CF, #7FCDCD)'
+            }}
           >
             ℹ️ About MIL
           </button>

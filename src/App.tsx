@@ -4,6 +4,7 @@ import Story from './pages/Story'
 import Quiz from './pages/Quiz'
 import Result from './pages/Result'
 import About from './pages/About'
+import BadNewsGame from './pages/BadNewsGame'
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/result" element={<Result />} />
           <Route path="/about" element={<About />} />
+          <Route path="/bad-news-game" element={<BadNewsGame />} />
         </Routes>
       </div>
     </Router>
