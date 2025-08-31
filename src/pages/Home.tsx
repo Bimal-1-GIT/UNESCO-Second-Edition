@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <div className="page-container">
       <header className="header">
-        <div className="mascot">🦸‍♀️</div>
         <h1>MIL4Kids</h1>
         <p className="welcome-text">
           Learn to spot fake news and play while learning! 🌟
@@ -70,7 +69,6 @@ const Home = () => {
         fontSize: '3rem',
         animation: 'bounce 2s infinite'
       }}>
-        🏫📚🌈
       </div>
     </div>
   )
